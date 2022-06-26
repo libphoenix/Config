@@ -1,0 +1,7 @@
+# ignore nvim packages
+plugged/
+dconf/
+gtk-2.0/
+light/
+pulse/
+vlc/

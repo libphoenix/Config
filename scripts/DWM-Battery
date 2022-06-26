@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# constants 
+
+declare -r BatteryNotificationStatePath=~/.config/tmp/Notifications/LowBatterySent
+declare -i LowBatteryMark=16
+
+STATUS=$(cat /sys/class/power_supply/BAT0/status)
+BATT=$(cat /sys/class/power_supply/BAT0/capacity)
+#BATTTEMP=$(cat /sys/class/power_supply/BAT0/temp)
+NOTIFIED=$(cat $BatteryNotificationStatePath)
+
+if [ "$STATUS" = "Discharging" ]; then
+	if [ $BATT -gt 20 ]; then
+		ICON="🔋"
+#	elif [ $BATT -gt 60 ]; then
+#       		ICON=""
+#	elif [ $BATT -gt 40 ]; then
+#        	ICON=""
+#	elif [ $BATT -gt 20 ]; then
+#        	ICON=""
+	else
+        	ICON="🪫"
+	fi
+else
+	ICON="⚡"
+	if [[ $BATT -gt $LowBatteryMark && "$NOTIFIED" -eq "Yes" ]]; then 
+		$(echo "No" > $BatteryNotificationStatePath)
+	fi
+fi
+if [[ $BATT -lt $LowBatteryMark && "$NOTIFIED" != "Yes" ]]; then 
+	#$(notify-send -u critical "Battery Low" "Battery level is $BATT")
+    $(notify-send  "Battery Low" "Please plug in" -a Danger -u critical)
+	$(echo "Yes" > $BatteryNotificationStatePath)
+fi
+echo "$ICON" "$BATT%"
+
+

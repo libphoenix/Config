@@ -1,0 +1,19 @@
+#!/bin/sh
+
+step=10
+current=$(light -G)
+if (( `echo | awk '{print ('$current' < 12)}'` ))
+then
+	step=2
+fi
+case $1 in 
+	# increase brightness
+	-i) 
+        light -A `echo $step`
+		;;
+	# decrease brightness
+	-d)
+        light -U `echo $step`
+		;;
+esac
+pkill -RTMIN+1 dwmblocks

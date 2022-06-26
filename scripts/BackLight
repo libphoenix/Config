@@ -1,0 +1,20 @@
+#!/bin/sh
+step=10
+current=$(light -s sysfs/leds/smc::kbd_backlight -G)
+if (( `echo | awk '{print ('$current' < 20)}'` ))
+then
+	step=5
+fi
+
+case $1 in 
+	# increase brightness
+	-i) 
+        light -s sysfs/leds/smc::kbd_backlight -A `echo $step` 
+		;;
+	# decrease brightness
+	-d)
+        light -s sysfs/leds/smc::kbd_backlight -U `echo $step`
+		;;
+esac
+current=$(light -s sysfs/leds/smc::kbd_backlight -G)
+notify-send -a Keyboard -i ~/.config/icons/backlight.svg "Backlight brightness `printf %.0f $(echo "$current" | bc -l)`%" -h "int:value:$current" -h string:x-dunst-stack-tag:backlight

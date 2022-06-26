@@ -1,0 +1,18 @@
+#!/bin/sh
+
+
+step=10
+case $1 in 
+	# increase Volume
+	-i)
+		pamixer -i $step
+		;;
+	# decrease Volume
+	-d)
+		pamixer -d $step
+		;;
+	# Toggle Volume
+	-t)
+		pamixer -t
+esac
+pkill -RTMIN+2 dwmblocks

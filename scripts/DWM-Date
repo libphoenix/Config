@@ -1,0 +1,5 @@
+#!/bin/bash
+
+dte="$(date +%a\ %D)"
+echo -e "$dte"
+

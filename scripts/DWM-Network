@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+nmcli c show | grep wlp3s0 | awk '{print $1}'

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BLT="$(light | awk '{print int($1)}')"
+echo -e "🔆 $BLT%"	
+
