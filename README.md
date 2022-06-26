@@ -16,7 +16,4 @@ config files for arch linux system
        -osssssso.      :ssssssso.        
       :osssssss/        osssso+++.       
      /ossssssss/        +ssssooo/-       
-   `/ossssso+/:-        -:/+osssso+-     
-  `+sso+:-`                 `.-/+oso:
- `++:.                           `-/+/
- .`                                 `/
+   `/ossssso+/:-        -:/+osssso+-
