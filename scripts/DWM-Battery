@@ -31,6 +31,7 @@ fi
 if [[ $BATT -lt $LowBatteryMark && "$NOTIFIED" != "Yes" ]]; then 
 	#$(notify-send -u critical "Battery Low" "Battery level is $BATT")
     $(notify-send  "Battery Low" "Please plug in" -a Danger -u critical)
+    play ~/.config/audio/notification.wav
 	$(echo "Yes" > $BatteryNotificationStatePath)
 fi
 echo "$ICON" "$BATT%"
