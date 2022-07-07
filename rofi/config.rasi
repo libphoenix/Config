@@ -6,7 +6,7 @@ font: "OCRA 12";
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
 show-icons: true;
-terminal: "st";
+terminal: "alacritty";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 /*	run-command: "{cmd}";*/
@@ -27,7 +27,7 @@ sort: false;
 /*	case-sensitive: false;*/
 /*	cycle: true;*/
 /*	sidebar-mode: false;*/
-hover-select: true;
+hover-select: false;
 /*	eh: 1;*/
 /*	auto-select: false;*/
 /*	parse-hosts: false;*/

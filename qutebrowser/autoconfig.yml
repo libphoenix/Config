@@ -7,5 +7,5 @@
 config_version: 2
 settings:
   content.headers.user_agent:
-    global: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML,
-      like Gecko) Chrome/97.0.4692.99 Safari/537.36
+    global: Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko)
+      {qt_key}/{qt_version} {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}
