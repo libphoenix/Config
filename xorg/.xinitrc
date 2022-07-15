@@ -1,6 +1,5 @@
 #!/bin/sh
 
-# dwm status 
 #DWMStatusBar
 dwmblocks &
 
@@ -15,10 +14,6 @@ picom -f &
 
 # Wallpaper 
 nitrogen --restore &
-
-# stop screen form sleeping 
-xset -dpms
-xset s off
 
 # Execute DWM
 exec dwm

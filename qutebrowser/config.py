@@ -1,7 +1,6 @@
 import subprocess
 import os
 from qutebrowser.api import interceptor
-import dracula.draw
 
 """
 qutebrowser settings for video
@@ -11,12 +10,7 @@ https://qutebrowser.org/doc/help/settings.html
 
 config.load_autoconfig(False)
 
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 6,
-        'horizontal': 8
-    }
-})
+config.source('onedark.py')
 # ================== Youtube Add Blocking ======================= {{{
 def filter_yt(info: interceptor.Request):
     """Block the given request if necessary."""

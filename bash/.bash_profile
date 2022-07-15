@@ -3,3 +3,4 @@ export PATH=${PATH}:/home/deepakpatel/.config/scripts:/home/deepakpatel/.cargo/b
 
 # starting dwm 
 #startx
+. "$HOME/.cargo/env"

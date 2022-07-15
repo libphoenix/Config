@@ -1,6 +1,6 @@
 configuration {
 /*	modi: "window,run,ssh";*/
-font: "OCRA 12";
+font: "OCRA 10";
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -145,4 +145,5 @@ display-drun: "Applications";
       sorting-method:    "name";
   }
 }
-@theme "~/.config/rofi/dracula-theme.rasi"
+//@theme "~/.config/rofi/dracula-theme.rasi"
+@theme "/usr/share/rofi/themes/sidebar.rasi"

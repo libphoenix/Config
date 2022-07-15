@@ -1,0 +1,19 @@
+(defwindow RightBar
+	   :monitor 0
+	   :geometry (geometry :x "0px"
+	   	     	       :y "0px"
+			       :width "10%"
+			       :heigth "20px"
+			       :anchor "top right")
+	:stacking "bg"
+	:wm-ignore true
+(greeter :text "Say Hello "
+	 :name "dp"))
+
+
+(defwidget greeter [?text name]
+  (box :orientation "horizontal"
+       :halign "center"
+    text
+    (button :onclick "notify-send 'Hello' 'Hello, ${name}'"
+      "Greet")))
