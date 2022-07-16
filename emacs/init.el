@@ -10,7 +10,8 @@
 ;; removing auto save and changing back up dir
 (setq auto-save-default nil)
 (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
-
+(setq initial-buffer-choice "~/")
+(setq default-tab-width 4)
 (setq visible-bell t) ;; visible bell on
 
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
