@@ -1,10 +1,5 @@
 #!/bin/sh
-step=10
-current=$(light -s sysfs/leds/smc::kbd_backlight -G)
-if (( `echo | awk '{print ('$current' < 20)}'` ))
-then
-	step=5
-fi
+step=5
 
 case $1 in 
 	# increase brightness
