@@ -1,8 +1,0 @@
-[user]
-	email = deepakpatelg16@gmail.com
-	name = deepak patel
-[filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
