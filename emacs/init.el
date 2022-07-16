@@ -6,7 +6,7 @@
 (set-fringe-mode 10) ;; give some breathing room
 (menu-bar-mode -1) ;; menu bar off
 (global-hl-line-mode 1) ;; highlighting current line
-
+(add-to-list 'initial-frame-alist '(fullscreen . maximized)) ;; maximizing window 
 ;; removing auto save and changing back up dir
 (setq auto-save-default nil)
 (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
