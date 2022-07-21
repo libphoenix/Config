@@ -1,7 +1,6 @@
 #!/bin/sh
 
 step=5
-current=$(light -G)
 case $1 in 
 	# increase brightness
 	-i) 
