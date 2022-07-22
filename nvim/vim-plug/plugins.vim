@@ -9,4 +9,5 @@ call plug#begin('~/.config/nvim/autoload/plugged')
  Plug 'vim-airline/vim-airline-themes'
  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all'}
  Plug 'junegunn/fzf.vim'
+ Plug 'jreybert/vimagit'
 call plug#end()
