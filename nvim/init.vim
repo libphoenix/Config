@@ -28,12 +28,17 @@ colorscheme dracula
 
 " NERD Tree 
 nnoremap <silent> <C-f> :NERDTreeToggle<CR>
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-s> :FZF<CR>
 let g:fzf_action = { 'ctrl-t' : 'tab split', 'ctrl-s' : 'split', 'ctrl-v' : 'vsplit' }
 
+" Magit config 
+nnoremap <silent> <C-g> :Magit<CR>
 
 " Window navigation 
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
+
+" quit window 
+nmap <C-W> :q <Enter>

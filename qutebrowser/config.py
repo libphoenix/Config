@@ -12,15 +12,21 @@ config.load_autoconfig(False)
 
 config.source('onedark.py')
 # ================== Youtube Add Blocking ======================= {{{
-def filter_yt(info: interceptor.Request):
-    """Block the given request if necessary."""
-    url = info.request_url
-    if (
-        url.host() == "www.youtube.com"
-        and url.path() == "/get_video_info"
-        and "&adformat=" in url.query()
-    ):
-        info.block()
+c.content.blocking.adblock.lists = [ \
+        "https://easylist.to/easylist/easylist.txt", \
+        "https://easylist.to/easylist/easyprivacy.txt", \
+        "https://secure.fanboy.co.nz/fanboy-cookiemonster.txt", \
+        "https://easylist.to/easylist/fanboy-annoyance.txt", \
+        "https://secure.fanboy.co.nz/fanboy-annoyance.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters-2020.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/privacy.txt", \
+        "https://github.com/uBlockOrigin/uAssets/raw/master/filters/filters.txt" \
+        ]
 
+c.content.blocking.enabled = True
+c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
+c.content.blocking.method = 'both'
 
-interceptor.register(filter_yt)
