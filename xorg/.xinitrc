@@ -4,13 +4,12 @@
 dwmblocks &
 
 # Notification service 
-dunst &
+#dunst &
 
 # remove mouse cursor when its not in use
 unclutter &
 
-# Compositor 
-picom -f &
+xset r rate 200 50 &
 
 # Wallpaper 
 nitrogen --restore &

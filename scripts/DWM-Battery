@@ -11,19 +11,21 @@ BATT=$(cat /sys/class/power_supply/BAT0/capacity)
 NOTIFIED=$(cat $BatteryNotificationStatePath)
 
 if [ "$STATUS" = "Discharging" ]; then
-	if [ $BATT -gt 20 ]; then
-		ICON="🔋"
-#	elif [ $BATT -gt 60 ]; then
-#       		ICON=""
-#	elif [ $BATT -gt 40 ]; then
-#        	ICON=""
-#	elif [ $BATT -gt 20 ]; then
-#        	ICON=""
-	else
-        	ICON="🪫"
-	fi
+  ICON="Batt"
+	#if [ $BATT -gt 80 ]; then
+	#	ICON="🔋"
+	#elif [ $BATT -gt 60 ]; then
+  #     		ICON=""
+	#elif [ $BATT -gt 40 ]; then
+  #      	ICON=""
+	#elif [ $BATT -gt 20 ]; then
+  #      	ICON=""
+	#else
+  #      	ICON="🪫"
+	#fi
 else
-	ICON="⚡"
+	#ICON="⚡"
+	ICON="Plug"
 	if [[ $BATT -gt $LowBatteryMark && "$NOTIFIED" -eq "Yes" ]]; then 
 		$(echo "No" > $BatteryNotificationStatePath)
 	fi

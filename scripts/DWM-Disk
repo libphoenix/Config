@@ -1,5 +1,5 @@
 #!/bin/bash
 
 hdd="$(df -h / | awk '{print $3, $5}' | sed '1d')"
-echo -e "💾 $hdd"
+echo -e "SSD $hdd"
 
