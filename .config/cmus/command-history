@@ -1,0 +1,12 @@
+player-prev-al
+add -p ~/Dropbox/Music/Melody
+pl-create Melody
+colorscheme dracula
+colorscheme dark
+filter blackpink
+help
+q
+s
+colorscheme :q
+colorscheme onedark
+colorscheme itune
