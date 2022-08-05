@@ -4,7 +4,7 @@
 dwmblocks &
 
 # Notification service 
-#dunst &
+dunst &
 
 # remove mouse cursor when its not in use
 unclutter &
