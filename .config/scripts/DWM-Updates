@@ -3,6 +3,5 @@
 # loading colors
 . ~/.config/scripts/bar_themes/onedark
 
-dte="$(date +%H:%M)"
-echo "$dte"
-
+updates="$(checkupdates | wc -l)"
+echo "Pkg $updates"

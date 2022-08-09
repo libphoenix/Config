@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# loading colors
+. ~/.config/scripts/bar_themes/onedark
+
 mem="$(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
-echo -e "RAM $mem"
+echo "RAM $mem"
 

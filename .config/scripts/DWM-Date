@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# loading colors
+. ~/.config/scripts/bar_themes/onedark
+
 dte="$(date +%a\ %D)"
-echo -e "$dte"
+echo "$dte"
 

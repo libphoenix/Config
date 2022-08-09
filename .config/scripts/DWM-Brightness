@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# laoding colors 
+. ~/.config/scripts/bar_themes/onedark
+
 BLT="$(light | awk '{print int($1)}')"
-echo -e "Mon $BLT%"	
+echo "Mon $BLT%"	
 

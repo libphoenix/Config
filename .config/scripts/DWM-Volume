@@ -1,7 +1,10 @@
 #!/bin/bash
 
+# loading colors
+. ~/.config/scripts/bar_themes/onedark
+
 if $(pamixer --get-mute); then
-    echo -e "MUTE"
+    echo "^b$red^ MUTE ^b$darkblue^"
 else 
-    echo -e "Vol `pamixer --get-volume`"
+    echo "Vol `pamixer --get-volume`"
 fi

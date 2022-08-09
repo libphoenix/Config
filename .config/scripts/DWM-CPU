@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# loading colors
+. ~/.config/scripts/bar_themes/onedark
+
 # CPU
 read cpu a b c previdle rest < /proc/stat
 prevtotal=$((a+b+c+previdle))
@@ -8,8 +11,8 @@ read cpu a b c idle rest < /proc/stat
 total=$((a+b+c+idle))
 cpu=$((100*( (total-prevtotal) - (idle-previdle) ) / (total-prevtotal) ))
 
-# Temp
-TEMP="$(sensors|awk 'BEGIN{i=0;t=0;b=0}/id [0-9]/{b=$4};/Core/{++i;t+=$3}END{if(i>0){printf("%0.1f\n",t/i)}else{sub(/[^0-9.]/,"",b);print b}}')"
-echo -e "CPU $cpu%, $TEMP deg"
+#echo "^b$darkblue^ CPU ^b$grey^  $cpu% ^b$black^"
 
-
+#printf "^c$black^ ^b$green^ CPU"
+#printf "^c$white^ ^b$grey^ $cpu"
+echo "^b$blue^ CPU $cpu"
