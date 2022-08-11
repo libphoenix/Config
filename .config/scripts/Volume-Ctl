@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 step=5
 case $1 in 
 	# increase Volume
@@ -15,4 +14,3 @@ case $1 in
 	-t)
 		pamixer -t
 esac
-pkill -RTMIN+2 dwmblocks
