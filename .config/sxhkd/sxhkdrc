@@ -45,7 +45,7 @@ XF86KbdBrightnessDown
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
+super + ctrl + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
