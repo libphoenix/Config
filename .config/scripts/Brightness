@@ -11,4 +11,4 @@ case $1 in
         light -U `echo $step`
 		;;
 esac
-notify-send -a Brightness -i ~/.config/icons/sun.png "Monitor brightness `printf %.0f $(light | bc -l)`%" -h "int:value:$(light)" -h string:x-dunst-stack-tag:Monitor
+notify-send -a Brightness -i ~/.config/icons/monitor.png "Monitor brightness `printf %.0f $(light | bc -l)`%" -h "int:value:$(light)" -h string:x-dunst-stack-tag:Monitor
