@@ -1,6 +1,4 @@
 #!/bin/bash
-# loading colors
-. ~/.config/scripts/bar_themes/onedark
 # constants 
 
 declare -r BatteryNotificationStatePath=~/.config/tmp/Notifications/LowBatterySent
@@ -8,22 +6,12 @@ declare -i LowBatteryMark=16
 
 STATUS=$(cat /sys/class/power_supply/BAT0/status)
 BATT=$(cat /sys/class/power_supply/BAT0/capacity)
-#BATTTEMP=$(cat /sys/class/power_supply/BAT0/temp)
 NOTIFIED=$(cat $BatteryNotificationStatePath)
 
-if [ "$STATUS" = "Discharging" ]; then
-  ICON="Batt"
-	if [ $BATT -gt 20 ]; then
-    echo "$ICON $BATT%"
-	else 
-    echo "^b$red^$ICON $BATT%"
-	fi
-else
-	ICON="Plug"
+if [ "$STATUS" = "Charging" ]; then
 	if [[ $BATT -gt $LowBatteryMark && "$NOTIFIED" -eq "Yes" ]]; then 
 		$(echo "No" > $BatteryNotificationStatePath)
 	fi
-  echo "$ICON $BATT%"
 fi
 if [[ $BATT -lt $LowBatteryMark && "$NOTIFIED" != "Yes" ]]; then 
     $(notify-send  "Battery Low" "Please plug in" -a Danger -u critical)
