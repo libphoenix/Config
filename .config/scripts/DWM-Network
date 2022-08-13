@@ -1,7 +1,0 @@
-#!/bin/bash 
-
-# loading colors
-. ~/.config/scripts/bar_themes/onedark
-
-name="$(nmcli c show | grep wlp3s0 | awk '{print $1}')"
-echo "Wifi ^b$darkblue^$name"

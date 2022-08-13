@@ -1,7 +1,0 @@
-#!/bin/bash
-
-# loading colors
-. ~/.config/scripts/bar_themes/onedark
-
-updates="$(checkupdates | wc -l)"
-echo "Pkg $updates"

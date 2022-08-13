@@ -5,10 +5,12 @@ case $1 in
 	# increase Volume
 	-i)
 		pamixer -i $step
+    notify-send -a Speaker -i ~/.config/icons/megaphone.png "Volume `printf %.0f $(pamixer --get-volume)`%" -h "int:value:$(pamixer --get-volume)" -h string:x-dunst-stack-tag:volume    
 		;;
 	# decrease Volume
 	-d)
 		pamixer -d $step
+    notify-send -a Speaker -i ~/.config/icons/megaphone.png "Volume `printf %.0f $(pamixer --get-volume)`%" -h "int:value:$(pamixer --get-volume)" -h string:x-dunst-stack-tag:volume    
 		;;
 	# Toggle Volume
 	-t)
