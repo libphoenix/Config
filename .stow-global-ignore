@@ -1,5 +1,6 @@
 # Comments and blank lines are allowed.
 
+.stow-global-ignore
 RCS
 .+,v
 
@@ -20,4 +21,4 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
-emacs
+.emacs
