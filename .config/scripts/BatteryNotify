@@ -14,7 +14,7 @@ if [ "$STATUS" = "Charging" ]; then
 	fi
 fi
 if [[ $BATT -lt $LowBatteryMark && "$NOTIFIED" != "Yes" ]]; then 
-    $(notify-send -i ~/.config/icons/voltage.png "Battery Low" "Please plug in" -a Danger -u critical)
+    $(notify-send -i ~/.config/icons/battery.png "Battery Low" "Please plug in" -a Danger -u critical)
     play ~/.config/audio/notification.wav
 	$(echo "Yes" > $BatteryNotificationStatePath)
 fi
