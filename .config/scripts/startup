@@ -1,0 +1,58 @@
+#! /bin/sh
+
+# constants 
+internalMonitor=eDP1
+externalMonitor=HDMI1
+
+# external monitor config
+isMonitorConnected=$(xrandr --query | grep 'HDMI1')
+
+addMonitor() {
+  noOfWorkspaces=5
+
+	xrandr --setmonitor external auto HDMI1
+	xrandr --output HDMI1 --mode 1920x1080 --left-of eDP1
+
+  for desktop in $(bspc query -D -m $internalMonitor | sed "$noOfWorkspaces"q)
+  do 
+    bspc desktop $desktop --to-monitor $externalMonitor
+  done
+  bspc desktop Desktop --remove 
+  polybar topExternal &
+}
+
+removeMonitor() {
+  bspc monitor $externalMonitor -a Desktop 
+
+	# Move everything to external monitor to reorder desktops
+	for desktop in $(bspc query -D -m $internalMonitor)
+	do
+		bspc desktop $desktop --to-monitor $externalMonitor
+	done
+
+	# Now move everything back to internal monitor
+	bspc monitor $externalMonitor -a Desktop # Temp desktop
+
+	for desktop in $(bspc query -D -m $externalMonitor)
+	do
+		bspc desktop $desktop --to-monitor $internalMonitor
+	done
+
+	bspc desktop Desktop --remove # Remove temp desktops
+
+	xrandr --output HDMI1 --off
+	xrandr -delmonitor external
+}
+
+
+if [[ $isMonitorConnected = *HDMI1\ connected* ]]; then 
+    addMonitor
+    killall -q polybar &
+    polybar topExternal &
+    polybar top &
+else
+    removeMonitor
+    killall -q polybar &
+    polybar top &
+fi
+

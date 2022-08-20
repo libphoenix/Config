@@ -1,15 +1,15 @@
 #! /bin/sh
+
 # autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
 feh --bg-fill --randomize ~/Images/OneDarkWallpapers/* &
-polybar &
-# Notification service 
 dunst &
-# remove mouse cursor when its not in use
 unclutter &
+bspc monitor eDP1 -d 1 2 3 4 &
+#startup
+polybar top &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
-
+# bspwm config
 bspc config border_width         2
 bspc config window_gap          12
 
