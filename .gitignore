@@ -11,3 +11,9 @@ vlc/
 # emacs package 
 elpa/
 .local/
+
+# qutebrowser 
+bookmarks/
+qsettings/
+autoconfig.yml
+quickmarks
