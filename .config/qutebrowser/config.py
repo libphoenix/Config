@@ -29,4 +29,3 @@ c.content.blocking.adblock.lists = [ \
 c.content.blocking.enabled = True
 c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
 c.content.blocking.method = 'both'
-
