@@ -3,4 +3,5 @@ export PATH=${PATH}:/home/deepakpatel/.config/scripts:/home/deepakpatel/.cargo/b
 . "$HOME/.cargo/env"
 
 # starting wm 
-startx
+#startx
+[[ $XDG_VTNR -le 2 ]] && tbsm
