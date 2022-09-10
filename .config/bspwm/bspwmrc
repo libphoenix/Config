@@ -2,14 +2,14 @@
 
 # autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-fill --randomize ~/Images/OneDarkWallpapers/06.png &
+feh --bg-fill $WALLPAPER &
 dunst &
 unclutter &
 xss-lock slock &
 setxkbmap -option ctrl:nocaps
 xset r rate 200 50 &
-bspc monitor eDP1 -d 1 2 3 4 5 6 7 8 9 10 &
-polybar top &
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10 &
+polybar $BARNAME &
 
 # bspwm config
 bspc config border_width         2
