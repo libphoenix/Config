@@ -112,19 +112,20 @@ scrolling:
 font:
   # Normal (roman) font face
   normal:
-    family: "OCRA"
+    #family: "Purisa"
+    family: "Anonymous Pro"
     style: Regular 
 
   bold:
-    family: "OCRA"
+    family: "Anonymous Pro"
     style: Bold
 
   italic:
-    family: "OCRA"
+    family: "Anonymous Pro"
     style: Italic
 
   bold_italic:
-    family: "OCRA"
+    family: "Anonymous Pro"
     style: Bold Italic
 
   # Point size
