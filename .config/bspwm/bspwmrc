@@ -2,7 +2,7 @@
 
 # autostart
 pgrep -x sxhkd > /dev/null || sxhkd &
-feh --bg-fill $WALLPAPER &
+feh --bg-fill --randomize /home/deepakpatel/Images/Wallpaper &
 dunst &
 unclutter &
 xss-lock slock &
