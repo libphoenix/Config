@@ -16,9 +16,18 @@ alias nv='neovide'
 alias lg='lazygit'
 alias cat='bat'
 alias fm='clifm'
+alias ?='lynx'
+alias ??='lynx https://google.com'
+alias ww='lynx'
 # end alias 
 
 
 . "$HOME/.cargo/env"
 
+if [ -f /etc/bash_completion ]; then
+   . /etc/bash_completion
+fi
 
+complete -cf sudo
+
+export PATH=${PATH}:/home/deepakpatel/mxe/usr/bin

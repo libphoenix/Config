@@ -6,4 +6,3 @@ export BARNAME=top
 
 # starting wm 
 #startx
-[[ $XDG_VTNR -le 2 ]] && tbsm
