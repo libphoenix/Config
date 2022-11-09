@@ -113,19 +113,19 @@ font:
   # Normal (roman) font face
   normal:
     #family: "Purisa"
-    family: "Anonymous Pro"
+    family: "ComicMono"
     style: Regular 
 
   bold:
-    family: "Anonymous Pro"
+    family: "ComicMono"
     style: Bold
 
   italic:
-    family: "Anonymous Pro"
+    family: "ComicMono"
     style: Italic
 
   bold_italic:
-    family: "Anonymous Pro"
+    family: "ComicMono"
     style: Bold Italic
 
   # Point size
