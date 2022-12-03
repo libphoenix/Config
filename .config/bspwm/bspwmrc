@@ -6,8 +6,8 @@ feh --bg-fill --randomize /home/deepakpatel/Images/Wallpaper &
 dunst &
 unclutter &
 xss-lock slock &
-setxkbmap -option ctrl:nocaps
-xset r rate 200 50 &
+setxkbmap -option ctrl:swapcaps
+xset r rate 300 100 &
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10 &
 polybar top &
 polybar bottom &
