@@ -30,3 +30,4 @@ bspc config focused_border_color "#8be9fd"
 
 # application rules
 bspc rule -a Emacs state=tiled
+play ~/.config/audio/Intro.wav
