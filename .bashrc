@@ -12,13 +12,15 @@ eval "$(starship init bash)"
 # alias 
 alias ls='ls --color=auto'
 alias la='ls -a --color=auto'
-alias nv='neovide'
+alias lv='lvim'
+alias nv='nvim'
 alias lg='lazygit'
 alias cat='bat'
 alias fm='clifm'
 alias ?='lynx'
 alias ??='lynx https://google.com'
 alias ww='lynx'
+alias search='pacman -Ss'
 # end alias 
 
 
@@ -30,4 +32,4 @@ fi
 
 complete -cf sudo
 
-export PATH=${PATH}:/home/deepakpatel/mxe/usr/bin
+export PATH=${PATH}:/home/deepakpatel/.local/bin
