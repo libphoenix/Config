@@ -21,6 +21,7 @@ alias ?='lynx'
 alias ??='lynx https://google.com'
 alias ww='lynx'
 alias search='pacman -Ss'
+alias chat='simplex-chat'
 # end alias 
 
 
