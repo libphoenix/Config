@@ -30,4 +30,9 @@ bspc config focused_border_color "#8be9fd"
 
 # application rules
 bspc rule -a Emacs state=tiled
-play ~/.config/audio/Intro.wav
+
+#scratch pads 
+bspc rule -a scratch-pad-kitty sticky=on state=floating rectangle=800x400+320+200
+bspc rule -a scratch-pad-btop sticky=on state=floating rectangle=800x460+320+200
+
+play ~/.config/audio/Intro.wav > /dev/null &

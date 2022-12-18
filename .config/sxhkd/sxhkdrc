@@ -2,9 +2,17 @@
 # wm independent hotkeys
 #
 
+# scratch pads
+
+super + T
+  scpad-kitty
+
+super + B
+  scpad-btop
+
 # terminal emulator
 super + Return
-	alacritty
+    alacritty
 
 # program launcher
 super + @space

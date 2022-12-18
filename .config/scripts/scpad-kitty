@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Project: bspwm scratchpad
+class="scratch-pad-kitty"
+winclass=$(xdotool search --class $class);
+if [ -z "$winclass" ];
+then
+     kitty --class $class
+else
+    if [ ! -f /tmp/$class ]; then
+          touch /tmp/$class && xdo show "$winclass"
+    elif [ -f /tmp/$class ]; then
+          rm /tmp/$class && xdo hide "$winclass"
+    fi
+fi
