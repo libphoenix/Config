@@ -16,3 +16,6 @@ config files for arch linux system
        -osssssso.      :ssssssso.        
       :osssssss/        osssso+++.       
      /ossssssss/        +ssssooo/-    
+
+## How to use install using stow
+stow .
