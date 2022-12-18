@@ -1,6 +1,14 @@
 #! /bin/sh
 
 # autostart
+killall polybar
+killall unclutter
+killall kitty
+killall alacritty
+killall sxhkd
+killall feh
+killall slock
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 feh --bg-fill --randomize /home/deepakpatel/Images/Wallpaper &
 dunst &
@@ -33,6 +41,6 @@ bspc rule -a Emacs state=tiled
 
 #scratch pads 
 bspc rule -a scratch-pad-kitty sticky=on state=floating rectangle=800x400+320+200
-bspc rule -a scratch-pad-btop sticky=on state=floating rectangle=800x460+320+200
+bspc rule -a scratch-pad-btop sticky=on state=floating rectangle=800x520+320+200
 
 play ~/.config/audio/Intro.wav > /dev/null &
