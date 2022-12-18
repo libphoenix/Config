@@ -3,8 +3,6 @@
 # autostart
 killall polybar
 killall unclutter
-killall kitty
-killall alacritty
 killall sxhkd
 killall feh
 killall slock
