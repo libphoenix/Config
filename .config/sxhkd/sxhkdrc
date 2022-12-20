@@ -10,6 +10,12 @@ super + T
 super + B
   scpad-btop
 
+super + M
+  scpad-cmus
+
+super + C
+  scpad-chat
+
 # terminal emulator
 super + Return
     alacritty
