@@ -34,3 +34,4 @@ fi
 complete -cf sudo
 
 export PATH=${PATH}:/home/deepakpatel/.local/bin
+

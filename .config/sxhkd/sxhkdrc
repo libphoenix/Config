@@ -18,7 +18,7 @@ super + C
 
 # terminal emulator
 super + Return
-    alacritty
+    alacritty -e "clifm"
 
 # program launcher
 super + @space
