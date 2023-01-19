@@ -37,25 +37,25 @@ super + L
   slock
 
 XF86MonBrightnessUp
-  Brightness -i
+  ~/.config/scripts/Brightness -i
 
 XF86MonBrightnessDown
-  Brightness -d
+  ~/.config/scripts/Brightness -d
 
 XF86AudioLowerVolume
-  Volume-Ctl -d
+  ~/.config/scripts/Volume-Ctl -d
 
 XF86AudioRaiseVolume
-  Volume-Ctl -i
+  ~/.config/scripts/Volume-Ctl -i
 
 XF86AudioMute
-  Volume-Ctl -t
+  ~/.config/scripts/Volume-Ctl -t
 
 XF86KbdBrightnessUp
-  BackLight -i
+  ~/.config/scripts/BackLight -i
 
 XF86KbdBrightnessDown
-  BackLight -d
+  ~/.config/scritps/BackLight -d
 
 
 # bspwm hotkeys

@@ -1,20 +1,12 @@
 #!/bin/bash
 # constants 
 
-declare -r BatteryNotificationStatePath=~/.config/tmp/Notifications/LowBatterySent
 declare -i LowBatteryMark=16
 
 STATUS=$(cat /sys/class/power_supply/BAT0/status)
 BATT=$(cat /sys/class/power_supply/BAT0/capacity)
-NOTIFIED=$(cat $BatteryNotificationStatePath)
 
-if [ "$STATUS" = "Charging" ]; then
-	if [[ $BATT -gt $LowBatteryMark && "$NOTIFIED" -eq "Yes" ]]; then 
-		$(echo "No" > $BatteryNotificationStatePath)
-	fi
-fi
-if [[ $BATT -lt $LowBatteryMark && "$NOTIFIED" != "Yes" ]]; then 
+if [[ $BATT -lt $LowBatteryMark && "$STATUS" != "Charging" ]]; then 
     $(notify-send -i ~/.config/icons/battery.png "Battery Low" "Please plug in" -a Danger -u critical)
-    play ~/.config/audio/low_battery.wav
-	$(echo "Yes" > $BatteryNotificationStatePath)
+    aplay -q ~/.config/audio/low_battery.wav
 fi

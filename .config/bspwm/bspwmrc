@@ -41,4 +41,4 @@ bspc rule -a scratch-pad-btop sticky=on state=floating rectangle=1200x700+120+10
 bspc rule -a scratch-pad-cmus sticky=on state=floating rectangle=1200x700+120+100
 bspc rule -a scratch-pad-chat sticky=on state=floating rectangle=1200x700+120+100
 
-play ~/.config/audio/Intro.wav > /dev/null &
+aplay ~/.config/audio/Intro.wav > /dev/null &
