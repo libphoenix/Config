@@ -10,7 +10,6 @@ vlc/
 
 # emacs package 
 elpa/
-.local/
 
 # qutebrowser 
 bookmarks/
