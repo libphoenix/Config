@@ -18,6 +18,9 @@ super + C
 
 # terminal emulator
 super + Return
+    alacritty
+
+super + shift + Return
     alacritty -e "clifm"
 
 # program launcher
