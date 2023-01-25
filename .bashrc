@@ -8,6 +8,7 @@ set -o vi
 # sharship config
 eval "$(starship init bash)"
 
+export EDITOR='lvim'
 
 # alias 
 alias ls='ls --color=auto'
@@ -43,4 +44,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 complete -cf sudo
+
+. "$HOME/.cargo/env"
+export PATH=$PATH:~/.local/bin
 

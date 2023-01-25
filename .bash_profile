@@ -5,3 +5,4 @@ export BARNAME=top
 
 # starting wm 
 #startx
+. "$HOME/.cargo/env"
