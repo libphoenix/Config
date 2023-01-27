@@ -2,20 +2,18 @@
 
 # autostart
 killall -q polybar
-killall picom
 
 # Laptop mode
-polybar -c ~/.config/polybar/config.ini top-internal &
-polybar -c ~/.config/polybar/config.ini bottom-internal &
+polybar -c /home/dp/.config/polybar/config.ini top &
+polybar -c /home/dp/.config/polybar/config.ini bottom &
 
 sxhkd &
-feh --bg-fill --randomize ~/Pictures/wallpaper &
+feh --bg-fill --randomize /home/dp/Images/Wallpaper &
 xset r rate 300 100
 xss-lock slock &
 unclutter &
 dunst &
 setxkbmap -option ctrl:swapcaps &
-picom --config $HOME/.config/picom/picom.conf &
 
 
 MONITOR_0="eDP-1"
