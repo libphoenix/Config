@@ -5,16 +5,16 @@
 # scratch pads
 
 super + T
-  scpad-kitty
+  /home/dp/.config/scripts/scpad-kitty
 
 super + B
-  scpad-btop
+  /home/dp/.config/scripts/scpad-btop
 
 super + M
-  scpad-cmus
+  /home/dp/.config/scripts/scpad-cmus
 
 super + C
-  scpad-chat
+  /home/dp/.config/scripts/scpad-chat
 
 # terminal emulator
 super + Return

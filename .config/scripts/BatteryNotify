@@ -5,8 +5,17 @@ declare -i LowBatteryMark=16
 
 STATUS=$(cat /sys/class/power_supply/BAT0/status)
 BATT=$(cat /sys/class/power_supply/BAT0/capacity)
-
+ 
 if [[ $BATT -lt $LowBatteryMark && "$STATUS" != "Charging" ]]; then 
-    $(notify-send -i ~/.config/icons/battery.png "Battery Low" "Please plug in" -a Danger -u critical)
-    #aplay -q ~/.config/audio/low_battery.wav
+  $(notify-send -i ~/.config/icons/battery.png "Battery Low" "Please plug in" -a Danger -u critical)
+  pactl set-sink-volume 0 70%
+  aplay -q ~/.config/audio/low_battery.wav
+  curl -s -d "Battery low" ntfy.sh/dp_work_7744 > /dev/null
+fi
+
+if [[ "$STATUS" = "Full" ]]; then
+    $(notify-send -i ~/.config/icons/battery-full.svg "Battery Full" "Please unplug" -a Alert -u normal)
+    pactl set-sink-volume 0 70%
+    aplay -q ~/.config/audio/BatteryFull.wav
+    curl -s -d "Battery full" ntfy.sh/dp_work_7744 > /dev/null
 fi

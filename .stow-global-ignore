@@ -22,3 +22,6 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 .emacs
+.bash_logout
+.bash_profile
+.bashrc

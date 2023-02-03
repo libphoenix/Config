@@ -3,15 +3,16 @@
 # autostart
 killall -q polybar
 killall picom
-xrandr --output eDP-1 --off
+xrandr --output eDP1 --off
 
 # First EXTERNAL_MONITOR
-polybar -c ~/.config/polybar/config.ini top &
-polybar -c ~/.config/polybar/config.ini bottom &
+polybar -c ~/.config/polybar/config.ini top-HDMI1 &
+polybar -c ~/.config/polybar/config.ini bottom-HDMI1 &
 
 # Second EXTERNAL_MONITOR 
-polybar -c ~/.config/polybar/config.ini top &
-polybar -c ~/.config/polybar/config.ini bottom &
+polybar -c ~/.config/polybar/config.ini top-DP1 &
+polybar -c ~/.config/polybar/config.ini bottom-DP1 &
+
 sxhkd &
 feh --bg-fill --randomize /home/dp/Images/Wallpaper &
 xset r rate 300 100
@@ -21,16 +22,13 @@ dunst &
 setxkbmap -option ctrl:swapcaps &
 picom &
 
-
-MONITOR_0="eDP-1"
-MONITOR_1="DP-1"
-MONITOR_2="HDMI-1"
+MONITOR_0="eDP1"
+MONITOR_1="DP1"
+MONITOR_2="HDMI1"
 # on first load setup default workspaces
-if [ "$1" -eq 0 ]; then
-  bspc monitor "$MONITOR_1" -d 1 2 3 4 
-  bspc monitor "$MONITOR_2" -d 6 7 8 9 10
-  bspc wm -O "$MONITOR_2" "$MONITOR_1"
-fi
+bspc monitor "$MONITOR_1" -d 1 2 3 4 
+bspc monitor "$MONITOR_2" -d 6 7 8 9 10
+bspc wm -O "$MONITOR_2" "$MONITOR_1"
 
 bspc config border_width         2
 bspc config window_gap          12
@@ -51,5 +49,5 @@ bspc rule -a scpad-btop sticky=on state=floating rectangle=1700x600+100+200
 bspc rule -a scpad-cmus sticky=on state=floating rectangle=1700x800+100+100 
 bspc rule -a scpad-chat sticky=on state=floating rectangle=1700x800+100+100 
 
-xrandr --output DP-1 --primary --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --right-of DP-1
-#suitup
+xrandr --output DP1 --primary --mode 1920x1080 --output HDMI1 --mode 1920x1080 --right-of DP1
+/home/dp/.config/scripts/suitup

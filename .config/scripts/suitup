@@ -1,0 +1,11 @@
+#!/bin/bash
+
+setxkbmap -option ctrl:swapcaps
+xset r rate 300 100
+
+if [[ "$(bspc query -D --names | grep Desktop)" ]]; then
+  bspc desktop Desktop --rename 5
+fi
+pactl set-sink-volume 0 60%
+aplay -q ~/.config/audio/jarvis_start_up.wav
+pactl set-sink-volume 0 60%
