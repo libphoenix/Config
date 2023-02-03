@@ -33,7 +33,7 @@ super + Escape
 
 # lock manager 
 
-super + L
+super + shift + space
   slock
 
 XF86MonBrightnessUp
