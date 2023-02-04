@@ -11,7 +11,7 @@ super + B
   /home/dp/.config/scripts/scpad-btop
 
 super + M
-  /home/dp/.config/scripts/scpad-cmus
+  /home/dp/.config/scripts/scpad-muskcube
 
 super + C
   /home/dp/.config/scripts/scpad-chat
@@ -100,6 +100,10 @@ super + ctrl + {m,x,y,z}
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+
+# rotate between horizontal and vertical split
+super + shift + r
+	bspc node @parent -R 90
 
 # focus the node for the given path jump
 super + {p,b,comma,period}

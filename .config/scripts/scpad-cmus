@@ -2,7 +2,7 @@
 
 # Project: bspwm scratchpad btop
 
-class="scratch-pad-cmus"
+class="scpad-cmus"
 winclass=$(xdotool search --class $class);
 if [ -z "$winclass" ];
 then

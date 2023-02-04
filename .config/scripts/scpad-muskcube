@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # Project: bspwm scratchpad
-class="scpad-kitty"
+
+class="scpad-muskcube"
 winclass=$(xdotool search --class $class);
 if [ -z "$winclass" ];
 then
-     kitty --class $class
+     kitty --class $class musikcube
 else
     if [ ! -f /tmp/$class ]; then
           touch /tmp/$class && xdo show "$winclass"
