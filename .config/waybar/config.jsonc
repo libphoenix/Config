@@ -22,7 +22,7 @@
 
     "hyprland/window": {
         "format": "{}",
-        "max-length": 90
+        "max-length": 60
     },
     "wlr/workspaces": {
         "disable-scroll": true,
