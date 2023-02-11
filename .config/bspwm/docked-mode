@@ -2,8 +2,8 @@
 
 # autostart
 killall -q polybar
-killall picom
-xrandr --output eDP1 --off
+#killall picom
+xrandr --output eDP-1 --off
 
 # First EXTERNAL_MONITOR
 polybar -c ~/.config/polybar/config.ini top-HDMI1 &
@@ -15,16 +15,17 @@ polybar -c ~/.config/polybar/config.ini bottom-DP1 &
 
 sxhkd &
 xset r rate 300 100
-xss-lock slock &
+#xss-lock slock &
 unclutter &
-dunst &
+#dunst &
 setxkbmap -option ctrl:swapcaps &
-picom --config /home/dp/.config/picom/picom.conf --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
+feh --bg-fill --randomize /home/dp/.wallpapers &
+#picom --config /home/dp/.config/picom/picom.conf --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
 
 
-MONITOR_0="eDP1"
-MONITOR_1="DP1"
-MONITOR_2="HDMI1"
+MONITOR_0="eDP-1"
+MONITOR_1="DP-1"
+MONITOR_2="HDMI-1"
 # on first load setup default workspaces
 bspc monitor "$MONITOR_1" -d 1 2 3 4 
 bspc monitor "$MONITOR_2" -d 6 7 8 9 10
@@ -50,7 +51,5 @@ bspc rule -a scpad-cmus sticky=on state=floating rectangle=1700x800+100+100
 bspc rule -a scpad-chat sticky=on state=floating rectangle=1700x800+100+100 
 bspc rule -a scpad-muskcube sticky=on state=floating rectangle=1700x800+100+100 
 
-#feh --bg-fill --randomize /home/dp/Images/Wallpaper &
-nitrogen --restore
-xrandr --output DP1 --primary --mode 1920x1080 --output HDMI1 --mode 1920x1080 --right-of DP1
+xrandr --output DP-1 --primary --mode 1920x1080 --output HDMI-1 --mode 1920x1080 --right-of DP-1
 /home/dp/.config/scripts/suitup

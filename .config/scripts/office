@@ -1,0 +1,4 @@
+#!/bin/bash 
+
+sudo mount /dev/sda2 /home/dp/Drive 
+sudo mount --bind /home/dp/Drive/home/dp /home/dp/Office

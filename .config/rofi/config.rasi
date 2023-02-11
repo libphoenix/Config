@@ -6,5 +6,6 @@ configuration {
   display-drun: "";
   display-window: "﩯 ";
   display-combi: "  ";
+  font: "ComicMono 12";
 }
 @theme "themes/sidetab-nord.rasi"
