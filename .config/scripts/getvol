@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+vol=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+
+if [[ -n $(amixer sget Master | grep off) ]] 
+then
+	vol="${vol} MUTE"
+else
+	vol="${vol}"
+fi
+echo $vol

@@ -17,7 +17,7 @@ sxhkd &
 xset r rate 300 100
 #xss-lock slock &
 unclutter &
-#dunst &
+dunst &
 setxkbmap -option ctrl:swapcaps &
 feh --bg-fill --randomize /home/dp/.wallpapers &
 #picom --config /home/dp/.config/picom/picom.conf --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &

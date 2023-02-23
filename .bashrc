@@ -22,9 +22,9 @@ alias c='clear'
 
 # package manager 
 alias search='emerge --search'
-alias install='sudo emerge --ask -q'
-alias update='sudo emerge --sync'
-alias remove='sudo emerge --unmerge'
+alias install='doas emerge --ask -q'
+alias update='doas emerge --sync'
+alias remove='doas emerge --unmerge'
 
 # git 
 alias ga='git add .'

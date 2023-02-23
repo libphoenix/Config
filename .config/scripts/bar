@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Statusbar loop
+while true; do
+	xsetroot -name " $(memory) << $(BatteryNotify) << dp"
+   sleep 10
+done &

@@ -8,4 +8,4 @@ configuration {
   display-combi: "  ";
   font: "ComicMono 12";
 }
-@theme "themes/sidetab-nord.rasi"
+@theme "/usr/share/rofi/themes/DarkBlue.rasi"

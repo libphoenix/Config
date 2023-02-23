@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+curl -s -d "$1" ntfy.sh/dp_gentoo_beast > /dev/null

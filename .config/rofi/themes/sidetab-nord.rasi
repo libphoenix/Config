@@ -65,7 +65,7 @@ element-icon {
    text-color: @foreground;
    placeholder: "Search";
    placeholder-color: @grey;
-   font: "ComicMono 12";
+   font: "ComicMono 10";
 }
 
 #prompt {
@@ -73,6 +73,6 @@ element-icon {
    padding: 0 4px;
    margin: 0 5px 0 0;
    text-color: @foreground;
-   font: "ComicMono 12";
+   font: "ComicMono 10";
 }
 

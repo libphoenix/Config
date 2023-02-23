@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mon=$(light -G)
+echo ${mon%.*}

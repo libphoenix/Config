@@ -16,3 +16,4 @@ case $1 in
 	-t)
 		amixer sset Master toggle -q
 esac
+pkill -RTMIN+11 dwmblocks
