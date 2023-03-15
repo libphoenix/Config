@@ -7,7 +7,7 @@ format = """
 
 [character]
 success_symbol = "[>](bold #D28D93)"
-error_symbol = "[✗](bold #D28D93)"
+error_symbol = "[x](bold #D28D93)"
 
 [username]
 style_user = "bold #D28D93"

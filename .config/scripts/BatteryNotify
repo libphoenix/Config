@@ -6,6 +6,9 @@ declare -i LowBatteryMark=16
 STATUS=$(cat /sys/class/power_supply/BAT0/status)
 BATT=$(cat /sys/class/power_supply/BAT0/capacity)
  
+#STATUS=$(cat /sys/class/power_supply/BAT1/status)
+#BATT=$(cat /sys/class/power_supply/BAT1/capacity)
+
 if [[ $BATT -lt $LowBatteryMark && "$STATUS" != "Charging" ]]; then 
   #$(notify-send -i ~/.config/icons/battery.png "Battery Low" "Please plug in" -a Danger -u critical)
   #pactl set-sink-volume 0 70%

@@ -1,169 +1,213 @@
-#
-# wm independent hotkeys
-#
+####################################
+######## wm independent hotkeys ###################################
+####################################
 
-# scratch pads
+# reload hotkeys ##
 
-super + T
-  /home/dp/.config/scripts/scpad-kitty
+# session ##
+super + shift + e                                                                                             
+      rwm_session.sh
 
-super + B
-  /home/dp/.config/scripts/scpad-btop
+########################
+########## 1 to 9 ##################################
+########################
 
-super + M
-  /home/dp/.config/scripts/scpad-muskcube
+# open
+super + 0
+      xopen.sh
 
-super + C
-  /home/dp/.config/scripts/scpad-chat
+# status ##
+super + 1
+      root_status.sh
+      
+# browser ##
+super + 2
+      xlinks.sh
 
-# terminal emulator
+# musicplayer ##
+super + 3
+       musicplayer.sh
+
+# podcastplayer ##
+super + 4
+      podcastplayer.sh
+
+# clock ##
+super + 5
+      xclock.sh
+
+# capturemedia ##
+super + 6
+      capturemedia.sh
+
+# rainbow ##
+super + 7
+      rainbow.sh
+
+# fetch ##
+super + 8
+      root_fetch.sh
+
+# keymap ##
+super + 9
+      herbe_status.sh
+
+####################
+########## tools ############################################
+####################
+
+# terminal/focus ##
 super + Return
-    alacritty
+      xterm -bc -ti vt340
 
-super + shift + Return
-    alacritty -e "clifm"
+# rename terminal ##
+super + r
+      rwm_terminalrename.sh
 
-# program launcher
-super + @space
-	rofi -show drun
+# togle
+super + Tab
+      rwm_terminaltogle.sh
+      
+#################################################
 
-super + shift + @space
-	rofi -show run
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
+# program launcher ##
+super + {_,shift +}Menu
+      {xlauncher.sh, dmenu_run.sh}
 
-# lock manager 
+####################################
 
-alt + ctrl + l
-  slock
+# proces ##
+super + period
+       proces.sh
 
-XF86MonBrightnessUp
-  ~/.config/scripts/Brightness -i
+#################################
 
-XF86MonBrightnessDown
-  ~/.config/scripts/Brightness -d
+# volume ##
+XF86AudioRaiseVolume
+	volup.sh
 
 XF86AudioLowerVolume
-  ~/.config/scripts/Volume-Ctl -d
-
-XF86AudioRaiseVolume
-  ~/.config/scripts/Volume-Ctl -i
-
+	voldown.sh
+	
 XF86AudioMute
-  ~/.config/scripts/Volume-Ctl -t
+	xterm -e alsamixer
 
-XF86KbdBrightnessUp
-  ~/.config/scripts/BackLight -i
+###################################################
 
-XF86KbdBrightnessDown
-  ~/.config/scritps/BackLight -d
+# screenshot ##
+Print
+	screenshot.sh
 
+################################################
 
-# bspwm hotkeys
-#
+# copi to clipboard ##
+super + x
+      xtoclip.sh
 
-# quit/restart bspwm
-super + ctrl + {q,r}
-	bspc {quit,wm -r}
+###############################
 
-# close and kill
-super + {_,shift + }w
-	bspc node -{c,k}
+# lock screen ##
+super + BackSpace
+      slock
 
-# alternate between the tiled and monocle layout
+#############################
+######### manage windows ########################################
+#############################
+
+# maximize ##
+super + f
+      rwm_maximize.sh
+      
+# monocule layout ##
 super + m
-	bspc desktop -l next
+      rwm_layout.sh -m
 
-# send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
+# tilling layout ##
+super + t
+      rwm_layout.sh -t
 
-# swap the current node and the biggest window
+# maximize master area
+super + {dead_acute,ccedilla}
+      rwm_settings.sh {-m,-M}
+
+# widespread layout ##
+super + w
+      rwm_layout.sh -w
+
+##################################################################
+
+# kill ##
+super + {_,shift +}q
+      {killw $(pfw),pkill $(wname $(pfw))}
+
+# switch focus  ##
+super + space
+	rwm_switchfocus.sh
+
+# focus next/prev ##
+super + {n,p}
+      rwm_starship.sh {-n,-p}
+
+# zzz ##
+super + {_,shift + }z
+      {windowsaver.sh,windowblur.sh}
+      
+########################################################################################
+
+# move ##
+super + {l,h,j,k}
+      rwm_moveresize.sh {-r,-l,-d,-u}
+      
+# resize ##
+super + shift + {l,h,j,k}
+      rwm_moveresize.sh {-W,-w,-H,-h}
+
+# warp ##
+alt + {y,u,b,n}
+    wmv -a {0 0,1280 0,0 800,1280 800} $(pfw)
+
+#######################
+########## groups ######################
+######################
+
+# add focused window / all windows to group ##
+super + {_,shift + }a
+      rwm_groups.sh {-a,-A}
+
+# delete focused window / all windows from group ##
+super + {_,shift +}d
+      rwm_groups.sh {-d,-D}
+
+# map / unmap groups ##
 super + g
-	bspc node -s biggest.window
+      rwm_groups.sh -t
 
-#
-# state/flags
-#
+######################
+########## mourse ##########################################
+######################
 
-# set the window state
-super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+# mose click ##
+# super + {8,9,0}
+#      xdotool click {1,2,3}
 
-# set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+################################
 
-#
-# focus/swap
-#
+# mouse move relative left ##
+super + {_,shift + }Left
+      wmp -{r -- -20 0,r -- -200 0}
 
-# focus the node in the given direction
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east}
+# mouse move relative right ##
+super + {_,shift + }Right
+      wmp -{r 20 0,r 200 0}
 
-# rotate between horizontal and vertical split
-super + shift + r
-	bspc node @parent -R 90
+# mouse move relative up ##
+super + {_,shift + }Up
+      wmp -{r 0 -20,r 0 -200}
 
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
+# mouse move relative down ##
+super +  {_,shift + }Down
+      wmp -{r 0 20,r 0 200}
 
-# focus the next/previous window in the current desktop
-super {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
-
-# focus the next/previous desktop in the current monitor
-super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
-
-# focus the last node/desktop
-super {grave,Tab}
-	bspc {node,desktop} -f last
-
-# focus the older or newer node in the focus history
-super {o,i}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
-
-# focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}' && polybar-msg action "#currentWorkspace.hook.0"
-#
-# preselect
-#
-
-# preselect the direction
-super + ctrl + {h,j,k,l}
-	bspc node -p {west,south,north,east}
-
-# preselect the ratio
-super + ctrl + {1-9}
-	bspc node -o 0.{1-9} 
-
-# cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
-
-# cancel the preselection for the focused desktop
-super + ctrl + shift + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
-#
-# move/resize
-#
-
-# expand a window by moving one of its side outward
-super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
-# contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
-# move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+# mouse banish ##
+super + b
+      wmp 1280 800
