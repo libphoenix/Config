@@ -8,7 +8,7 @@ set -o vi
 # sharship config
 eval "$(starship init bash)"
 
-export EDITOR='lvim'
+export EDITOR='emacs'
 
 # alias 
 alias ls='ls --color=auto'
