@@ -12,7 +12,3 @@ vlc/
 elpa/
 
 # qutebrowser 
-bookmarks/
-qsettings/
-autoconfig.yml
-quickmarks
