@@ -1,19 +1,16 @@
 #!/bin/sh
-
 step=5
 case $1 in 
 	# increase Volume
 	-i)
-		amixer -D pulse sset Master 5%+ -q
-    #notify-send -a Speaker -i ~/.config/icons/megaphone.png "Volume `printf %.0f $(pamixer --get-volume)`%" -h "int:value:$(pamixer --get-volume)" -h string:x-dunst-stack-tag:volume    
+      pamixer -i 5
 		;;
 	# decrease Volume
 	-d)
-		amixer -D pulse sset Master 5%- -q
-    #notify-send -a Speaker -i ~/.config/icons/megaphone.png "Volume `printf %.0f $(pamixer --get-volume)`%" -h "int:value:$(pamixer --get-volume)" -h string:x-dunst-stack-tag:volume    
+      pamixer -d 5
 		;;
 	# Toggle Volume
 	-t)
-		amixer sset Master toggle -q
+      pamixer -t
 esac
 pkill -RTMIN+11 dwmblocks

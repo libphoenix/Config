@@ -21,10 +21,10 @@ alias fm='clifm'
 alias c='clear'
 
 # package manager 
-alias search='emerge --search'
-alias install='sudo emerge --ask -q'
-alias update='sudo emerge --ask -q --verbose --update --deep --newuse @world'
-alias remove='sudo emerge --unmerge'
+alias search='pacman -Ss'
+alias install='sudo pacman -S'
+alias update='sudo pacman -Syu'
+alias remove='sudo pacman -Rsu'
 
 # git 
 alias ga='git add .'
@@ -44,4 +44,4 @@ fi
 
 complete -cf sudo
 
-export PATH=$PATH:~/.local/bin:~/.config/emacs/bin:/home/dp/go/bin
+export PATH=$PATH:~/.local/bin:/home/dp/go/bin

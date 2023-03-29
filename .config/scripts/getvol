@@ -1,8 +1,9 @@
 #!/bin/bash
 #
-vol=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+#vol=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
+vol=$(pamixer --get-volume)
 
-if [[ -n $(amixer sget Master | grep off) ]] 
+if [[ -n $(pamixer --get-mute | grep true) ]] 
 then
 	vol="${vol} MUTE"
 else
