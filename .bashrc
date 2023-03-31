@@ -11,11 +11,12 @@ eval "$(starship init bash)"
 export EDITOR='emacs'
 
 # alias 
-alias ls='ls --color=auto'
-alias la='ls -a --color=auto'
-alias ll='ls -l --color=auto'
+alias ls='ls --color'
+alias la='ls -a --color'
+alias ll='ls -l --color'
 alias lv='lvim'
 alias nv='nvim'
+alias nvide='neovide --neovim-bin /home/dp/.local/bin/lvim'
 alias lg='lazygit'
 alias fm='clifm'
 alias c='clear'
@@ -44,4 +45,4 @@ fi
 
 complete -cf sudo
 
-export PATH=$PATH:~/.local/bin:/home/dp/go/bin
+export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/

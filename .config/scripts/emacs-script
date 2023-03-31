@@ -1,3 +1,0 @@
-#!/bin/bash 
-
-emacsclient --socket-name=/tmp/emacs$(id -u)/server -c -a 'emacs'
