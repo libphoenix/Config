@@ -6,6 +6,6 @@ configuration {
   display-drun: "";
   display-window: "﩯 ";
   display-combi: "  ";
-  font: "ComicMono 12";
+  font: "ComicMono 14";
 }
 @theme "/usr/share/rofi/themes/DarkBlue.rasi"
