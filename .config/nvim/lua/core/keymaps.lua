@@ -52,3 +52,5 @@ keymap.set("n", "<leader>pu", ":PackerUpdate<CR>") -- update packer plugin
 
 -- fugitive git wrapper
 keymap.set("n", "<leader>gs", ":Git<CR>") -- installs new plugin
+keymap.set("n", "<leader>g<S-p>", ":Git push<CR>") -- installs new plugin
+keymap.set("n", "<leader>gp", ":Git pull<CR>") -- installs new plugin
