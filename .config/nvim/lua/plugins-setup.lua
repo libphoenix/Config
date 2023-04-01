@@ -86,7 +86,7 @@ return require("packer").startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
-	use("tpope/vim-fugitive") -- git wrapper
+	use("kdheepak/lazygit.nvim") -- lazygit plugin
 
 	-- fast movement
 	use({ "phaazon/hop.nvim", branch = "v2" })

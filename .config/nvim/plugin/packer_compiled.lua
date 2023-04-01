@@ -130,6 +130,11 @@ _G.packer_plugins = {
     path = "/home/dp/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/home/dp/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/home/dp/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -231,11 +236,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dp/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
-  },
-  ["vim-fugitive"] = {
-    loaded = true,
-    path = "/home/dp/.local/share/nvim/site/pack/packer/start/vim-fugitive",
-    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-maximizer"] = {
     loaded = true,
