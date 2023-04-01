@@ -47,7 +47,7 @@ keymap.set("n", "<leader>ms", ":Mason<CR>") -- toggles window max and restore si
 
 -- packer
 keymap.set("n", "<leader>pi", ":PackerInstall<CR>") -- installs new plugin
-keymap.set("n", "<leader>ps", ":PackerStatus<CR>") -- Shows packer status
+keymap.set("n", "<leader>ps", ":PackerSync<CR>") -- Shows packer status
 keymap.set("n", "<leader>pu", ":PackerUpdate<CR>") -- update packer plugin
 
 -- fugitive git wrapper

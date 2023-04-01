@@ -99,8 +99,10 @@ return require("packer").startup(function(use)
 
 	-- dashboard
 	use({
-		"glepnir/dashboard-nvim",
-		event = "VimEnter",
+		"goolord/alpha-nvim",
+		config = function()
+			require("alpha").setup(require("alpha.themes.startify").config)
+		end,
 	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
