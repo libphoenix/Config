@@ -21,6 +21,7 @@ require("plugins.gitsigns")
 require("plugins.todo-comments")
 require("plugins.hop")
 require("plugins.transparent")
+require("plugins.Fterm")
 
 -- lsp
 require("plugins.lsp.mason")

@@ -103,6 +103,9 @@ return require("packer").startup(function(use)
 	-- transparent window
 	use("xiyaowong/transparent.nvim")
 
+	-- terminal plugin
+	use("numToStr/FTerm.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then
