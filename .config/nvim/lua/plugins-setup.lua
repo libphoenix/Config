@@ -98,12 +98,10 @@ return require("packer").startup(function(use)
 	use("folke/todo-comments.nvim")
 
 	-- dashboard
-	use({
-		"goolord/alpha-nvim",
-		config = function()
-			require("alpha").setup(require("alpha.themes.startify").config)
-		end,
-	})
+	use("goolord/alpha-nvim")
+
+	-- transparent window
+	use("xiyaowong/transparent.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

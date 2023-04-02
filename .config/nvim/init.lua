@@ -20,9 +20,12 @@ require("plugins.treesitter")
 require("plugins.gitsigns")
 require("plugins.todo-comments")
 require("plugins.hop")
+require("plugins.dashboard-nvim")
+require("plugins.transparent")
 
 -- lsp
 require("plugins.lsp.mason")
 require("plugins.lsp.lspsaga")
 require("plugins.lsp.lsp-config")
 require("plugins.lsp.null-ls")
+-- plugins end
