@@ -20,7 +20,6 @@ require("plugins.treesitter")
 require("plugins.gitsigns")
 require("plugins.todo-comments")
 require("plugins.hop")
-require("plugins.dashboard-nvim")
 require("plugins.transparent")
 
 -- lsp

@@ -98,7 +98,7 @@ return require("packer").startup(function(use)
 	use("folke/todo-comments.nvim")
 
 	-- dashboard
-	use("goolord/alpha-nvim")
+	use("saifshahriar/vim-startify")
 
 	-- transparent window
 	use("xiyaowong/transparent.nvim")

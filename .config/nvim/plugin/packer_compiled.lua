@@ -89,12 +89,6 @@ _G.packer_plugins = {
     path = "/home/dp/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
     url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
-  ["alpha-nvim"] = {
-    config = { "\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0" },
-    loaded = true,
-    path = "/home/dp/.local/share/nvim/site/pack/packer/start/alpha-nvim",
-    url = "https://github.com/goolord/alpha-nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/dp/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -237,6 +231,11 @@ _G.packer_plugins = {
     path = "/home/dp/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
+  ["transparent.nvim"] = {
+    loaded = true,
+    path = "/home/dp/.local/share/nvim/site/pack/packer/start/transparent.nvim",
+    url = "https://github.com/xiyaowong/transparent.nvim"
+  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "/home/dp/.local/share/nvim/site/pack/packer/start/vim-maximizer",
@@ -246,6 +245,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dp/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
     url = "https://github.com/bluz71/vim-nightfly-guicolors"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/home/dp/.local/share/nvim/site/pack/packer/start/vim-startify",
+    url = "https://github.com/saifshahriar/vim-startify"
   },
   ["vim-surround"] = {
     loaded = true,
@@ -260,10 +264,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\2B\0\2\1K\0\1\0\vconfig\26alpha.themes.startify\nsetup\nalpha\frequire\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

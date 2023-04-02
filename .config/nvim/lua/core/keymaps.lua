@@ -52,3 +52,7 @@ keymap.set("n", "<leader>pu", ":PackerUpdate<CR>") -- update packer plugin
 
 -- lazygit
 keymap.set("n", "<leader>gg", ":LazyGit<CR>") -- installs new plugin
+
+-- search
+keymap.set("n", "<leader>hw", ":HopWord<CR>") -- Hop to a word
+keymap.set("n", "<leader>hl", ":HopLine<CR>") -- Hop to a line
