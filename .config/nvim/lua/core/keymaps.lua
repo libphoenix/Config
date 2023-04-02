@@ -58,6 +58,6 @@ keymap.set("n", "<leader>hw", ":HopWord<CR>") -- Hop to a word
 keymap.set("n", "<leader>hl", ":HopLine<CR>") -- Hop to a line
 
 -- terminal commands
-keymap.set("t", "<leader>tt", "<C-\\><C-n><CMD>:FTermToggle<CR>") -- Toggle Fterm
-keymap.set("n", "<leader>tt", ":FTermToggle<CR>") -- Toggle Fterm
+keymap.set("t", "<C-x>", "<C-\\><C-n><CMD>:FTermToggle<CR>") -- Toggle Fterm in terminal mode
+keymap.set("n", "<leader>tt", ":FTermToggle<CR>") -- Toggle Fterm in normal mode
 keymap.set("n", "<leader>tx", ":FTermExit<CR>") -- Close Fterm
