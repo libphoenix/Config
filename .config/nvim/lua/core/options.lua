@@ -1,7 +1,7 @@
 local opt = vim.opt
 
 -- font
-vim.o.guifont = "Comic Mono:h14"
+vim.o.guifont = "Comic Mono:h10"
 
 -- basic settings
 -- line numbers
