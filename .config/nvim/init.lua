@@ -1,7 +1,7 @@
 -- neovim config in lua
 -- imports start
 
-require("plugins-setup")
+require("pluginsSetup")
 
 require("core.options")
 require("core.keymaps")
@@ -11,21 +11,22 @@ require("core.colorscheme")
 
 -- plugins start
 require("plugins.comment")
-require("plugins.nvim-tree")
+require("plugins.nvimTree")
 require("plugins.lualine")
 require("plugins.telescope")
-require("plugins.nvim-cmp")
+require("plugins.nvimCmp")
 require("plugins.autopairs")
 require("plugins.treesitter")
 require("plugins.gitsigns")
-require("plugins.todo-comments")
+require("plugins.todoComments")
 require("plugins.hop")
 require("plugins.transparent")
 require("plugins.Fterm")
+require("plugins.tabline")
 
 -- lsp
 require("plugins.lsp.mason")
 require("plugins.lsp.lspsaga")
-require("plugins.lsp.lsp-config")
-require("plugins.lsp.null-ls")
+require("plugins.lsp.lspConfig")
+require("plugins.lsp.nullLs")
 -- plugins end

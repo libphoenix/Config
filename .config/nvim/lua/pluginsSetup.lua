@@ -106,6 +106,9 @@ return require("packer").startup(function(use)
 	-- terminal plugin
 	use("numToStr/FTerm.nvim")
 
+	-- tabline
+	use("kdheepak/tabline.nvim")
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

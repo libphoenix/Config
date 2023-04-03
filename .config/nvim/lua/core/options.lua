@@ -1,33 +1,32 @@
-
 local opt = vim.opt
 
 -- font
-vim.o.guifont = "Comic Mono:h10"
+vim.o.guifont = "Comic Mono:h14"
 
 -- basic settings
 -- line numbers
 opt.relativenumber = false
 opt.number = true
 
--- tabs & indentation 
+-- tabs & indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
--- line warpping 
-opt.wrap = false 
+-- line warpping
+opt.wrap = false
 
--- search settings 
-opt.ignorecase = true 
+-- search settings
+opt.ignorecase = true
 opt.smartcase = true
 
--- appearance 
+-- appearance
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 
--- backspace 
+-- backspace
 opt.backspace = "indent,eol,start"
 
 -- clipboard

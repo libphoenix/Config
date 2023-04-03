@@ -3,6 +3,10 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
+-- treesitter
+keymap.set("n", "<C-c>", ":foldclose<CR>") -- jk to esc insert mode
+keymap.set("n", "<C-o>", ":foldopen<CR>") -- jk to esc insert mode
+
 keymap.set("i", "jk", "<ESC>") -- jk to esc insert mode
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear highligt
@@ -18,6 +22,12 @@ keymap.set("n", "<leader>qq", ":q!<CR>") -- save file
 -- file
 keymap.set("n", "<leader>fs", ":w<CR>") -- save file
 keymap.set("n", "<leader>fe", ":RnvimrToggle<CR>") -- save file
+keymap.set("n", "<leader>fn", ":TablineTabNew<CR>") -- move buffer previous
+
+-- buffers
+keymap.set("n", "<C-b>", ":TablineBufferPrevious<CR>") -- move buffer previous
+keymap.set("n", "<C-n>", ":TablineBufferNext<CR>") -- move buffer next
+keymap.set("n", "<leader>bc", ":bd<CR>") -- move buffer next
 
 -- split
 keymap.set("n", "<leader>wv", "<C-w>v") -- split window vertically
@@ -41,6 +51,10 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggles nvim tree
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- telescope find file
 keymap.set("n", "<leader>bb", ":<cmd>Telescope buffers<CR>") -- telescope find buffers
 keymap.set("n", "<leader>hh", ":<cmd>Telescope help_tags<CR>") -- telescope help tags
+keymap.set("n", "<leader>ss", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+
+-- telescope git commands
+keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 
 -- mason
 keymap.set("n", "<leader>ms", ":Mason<CR>") -- toggles window max and restore size
@@ -54,10 +68,10 @@ keymap.set("n", "<leader>pu", ":PackerUpdate<CR>") -- update packer plugin
 keymap.set("n", "<leader>gg", ":LazyGit<CR>") -- installs new plugin
 
 -- search
-keymap.set("n", "<leader>hw", ":HopWord<CR>") -- Hop to a word
-keymap.set("n", "<leader>hl", ":HopLine<CR>") -- Hop to a line
+keymap.set("n", "s", ":HopWord<CR>") -- Hop to a word
+keymap.set("n", "<S-s>", ":HopLine<CR>") -- Hop to a line
 
 -- terminal commands
-keymap.set("t", "<C-x>", "<C-\\><C-n><CMD>:FTermToggle<CR>") -- Toggle Fterm in terminal mode
-keymap.set("n", "<leader>tt", ":FTermToggle<CR>") -- Toggle Fterm in normal mode
+keymap.set("t", "<ESC><ESC>", "<C-\\><C-n><CMD>:FTermClose<CR>") -- Toggle Fterm in terminal mode
+keymap.set("n", "<leader>tt", ":FTermOpen<CR>") -- Toggle Fterm in normal mode
 keymap.set("n", "<leader>tx", ":FTermExit<CR>") -- Close Fterm
