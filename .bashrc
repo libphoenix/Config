@@ -16,10 +16,10 @@ alias la='ls -a --color'
 alias ll='ls -l --color'
 alias lv='lvim'
 alias vim='nvim'
-alias neo='neovide --neovim-bin /home/dp/.local/bin/lvim'
 alias lg='lazygit'
 alias fm='clifm'
 alias c='clear'
+alias neo='neovide'
 
 # package manager 
 alias search='pacman -Ss'
