@@ -8,15 +8,15 @@ set -o vi
 # sharship config
 eval "$(starship init bash)"
 
-export EDITOR='emacs'
+export EDITOR='nvim'
 
 # alias 
 alias ls='ls --color'
 alias la='ls -a --color'
 alias ll='ls -l --color'
 alias lv='lvim'
-alias nv='nvim'
-alias nvide='neovide --neovim-bin /home/dp/.local/bin/lvim'
+alias vim='nvim'
+alias neo='neovide --neovim-bin /home/dp/.local/bin/lvim'
 alias lg='lazygit'
 alias fm='clifm'
 alias c='clear'
@@ -31,9 +31,6 @@ alias remove='sudo pacman -Rsu'
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
-
-# emacs
-alias emacs="emacsclient --socket-name=/tmp/emacs$(id -u)/server -c -a 'emacs'"
 
 # end alias 
 
