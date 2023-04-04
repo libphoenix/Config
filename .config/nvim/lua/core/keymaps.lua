@@ -8,6 +8,7 @@ keymap.set("n", "<C-c>", ":foldclose<CR>") -- jk to esc insert mode
 keymap.set("n", "<C-o>", ":foldopen<CR>") -- jk to esc insert mode
 
 keymap.set("i", "jk", "<ESC>") -- jk to esc insert mode
+keymap.set("i", "kj", "<ESC>") -- kj to esc insert mode
 
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- clear highligt
 
@@ -22,12 +23,12 @@ keymap.set("n", "<leader>qq", ":q!<CR>") -- save file
 -- file
 keymap.set("n", "<leader>fs", ":w<CR>") -- save file
 keymap.set("n", "<leader>fe", ":RnvimrToggle<CR>") -- save file
-keymap.set("n", "<leader>fn", ":TablineTabNew<CR>") -- move buffer previous
 
 -- buffers
 keymap.set("n", "<C-b>", ":TablineBufferPrevious<CR>") -- move buffer previous
 keymap.set("n", "<C-n>", ":TablineBufferNext<CR>") -- move buffer next
 keymap.set("n", "<leader>bc", ":bd<CR>") -- move buffer next
+keymap.set("n", "<leader>bn", ":TablineTabNew<CR>") -- move buffer previous
 
 -- split
 keymap.set("n", "<leader>wv", "<C-w>v") -- split window vertically
