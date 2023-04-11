@@ -25,3 +25,5 @@ _darcs
 .bash_logout
 .bash_profile
 .bashrc
+
+.config/nvim
