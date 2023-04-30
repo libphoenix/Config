@@ -13,4 +13,4 @@ picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zo
 
 
 
-feh --bg-fill /home/dp/.wallpapers/earth-from-space-lights.jpg &
+feh --bg-fill /home/dp/.wallpapers/earth-from-space.jpg &
