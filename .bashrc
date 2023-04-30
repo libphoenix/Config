@@ -9,6 +9,7 @@ set -o vi
 eval "$(starship init bash)"
 
 export EDITOR='nvim'
+export BROWSER='firefox'
 
 # alias 
 alias ls='ls --color'
@@ -18,7 +19,6 @@ alias vim='lvim'
 alias lg='lazygit'
 alias fm='clifm'
 alias c='clear'
-alias neo='neovide'
 
 # package manager 
 alias search='pacman -Ss'
@@ -41,4 +41,4 @@ fi
 
 complete -cf sudo
 
-export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/
+export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/:/home/dp/.cargo/bin

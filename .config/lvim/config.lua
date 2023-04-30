@@ -192,6 +192,9 @@ lvim.plugins = {
   {
     'kdheepak/lazygit.nvim'
   },
+  {
+    'Mofiqul/dracula.nvim'
+  }
 }
 
 -- -- Autocommands (`:help autocmd`) <https://neovim.io/doc/user/autocmd.html>
