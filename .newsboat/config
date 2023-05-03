@@ -1,5 +1,5 @@
-bind-key  j down
-bind-key  k up
+bind-key  h down
+bind-key  t up
 
 browser "/bin/firefox %u"
 show-read-feeds yes
