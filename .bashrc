@@ -42,3 +42,5 @@ fi
 complete -cf sudo
 
 export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/:/home/dp/.cargo/bin
+
+[ -f "/home/dp/.ghcup/env" ] && source "/home/dp/.ghcup/env" # ghcup-env

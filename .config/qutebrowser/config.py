@@ -4,7 +4,7 @@ import draw
 from qutebrowser.api import interceptor
 
 
-config.load_autoconfig(False)
+config.load_autoconfig(True)
 
 draw.blood(c, {
     'spacing': {

@@ -1,7 +1,7 @@
 def blood(c, options = {}):
     palette = {
         'background': '#282a36',
-        'background-alt': '#282a36', 
+        'background-alt': '#282a36',
         'background-attention': '#181920',
         'border': '#282a36',
         'current-line': '#44475a',
@@ -16,8 +16,9 @@ def blood(c, options = {}):
         'pink': '#ff79c6',
         'purple': '#bd93f9',
         'red': '#ff5555',
-        'yellow': '#f1fa8c'
-    }   
+        'yellow': '#f1fa8c',
+        'insert-bg': '#405a5b'
+    }
 
     spacing = options.get('spacing', {
         'vertical': 5,
@@ -180,7 +181,8 @@ def blood(c, options = {}):
     c.colors.statusbar.command.private.fg = palette['foreground-alt']
 
     ## Background color of the statusbar in insert mode.
-    c.colors.statusbar.insert.bg = palette['background-attention']
+    # c.colors.statusbar.insert.bg = palette['background-attention']
+    c.colors.statusbar.insert.bg = palette['insert-bg']
 
     ## Foreground color of the statusbar in insert mode.
     c.colors.statusbar.insert.fg = palette['foreground-attention']
