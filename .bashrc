@@ -9,9 +9,9 @@ set -o vi
 eval "$(starship init bash)"
 
 export EDITOR='nvim'
-export BROWSER='firefox'
+export BROWSER='qutebrowser'
 
-# alias 
+# alias
 alias ls='ls --color'
 alias la='ls -a --color'
 alias ll='ls -l --color'
@@ -20,18 +20,18 @@ alias lg='lazygit'
 alias fm='clifm'
 alias c='clear'
 
-# package manager 
+# package manager
 alias search='pacman -Ss'
 alias install='sudo pacman -S'
 alias update='sudo pacman -Syu'
 alias remove='sudo pacman -Rsu'
 
-# git 
+# git
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
 
-# end alias 
+# end alias
 
 
 
