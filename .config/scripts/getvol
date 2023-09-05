@@ -4,6 +4,7 @@
 vol=$(pamixer --get-volume)
 
 if [[ -n $(pamixer --get-mute | grep true) ]] 
+#if [[ -n $(amixer sget Master | grep '\[off\]') ]] 
 then
 	vol="${vol} MUTE"
 else

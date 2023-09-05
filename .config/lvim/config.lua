@@ -25,15 +25,16 @@ lvim.leader = "space"
 lvim.keys.normal_mode["ss"] = "<cmd>HopAnywhere<cr>"
 lvim.keys.normal_mode["sl"] = "<cmd>HopAnywhereCurrentLine<cr>"
 
+lvim.keys.normal_mode["<C-h>"] = "<cmd>TablineBufferPrevious<cr>"
+lvim.keys.normal_mode["<C-l>"] = "<cmd>TablineBufferNext<cr>"
+
 -- clear highlight
 
 lvim.builtin.which_key.mappings["c"] = { "<cmd>noh<cr>", "clear highlight" }
 -- buffers
 lvim.builtin.which_key.mappings["b"] = {
   name = "buffers",
-  b = { "<cmd>TablineBufferPrevious<cr>", "buffer previous" },
-  n = { "<cmd>TablineBufferNext<cr>", "buffer next" },
-  f = { "<cmd>Telescope buffers previewer=false<cr>", "Find buffers" },
+  b = { "<cmd>Telescope buffers previewer=false<cr>", "Find buffers" },
   c = { "<cmd>bd<cr>", "close current buffer" },
 }
 
@@ -70,16 +71,13 @@ lvim.builtin.which_key.mappings["f"] = {
 
 lvim.builtin.which_key.mappings["w"] = {
   name = "window",
-  s = {
-    name = "split",
-    v = { "<cmd>vsplit<cr>", "split vertically" },
-    h = { "<cmd>split<cr>", "horizontal vertically" },
-  },
+  y = { "<cmd>vsplit<cr>", "split vertically" },
+  x = { "<cmd>split<cr>", "horizontal vertically" },
   c = { "<cmd>close<cr>", "close split" },
   h = { "<C-w><C-h>", "Move to left window" },
   j = { "<C-w><C-j>", "Move to down window" },
-  k = { "<C-w><C-h>", "Move to up window" },
-  l = { "<C-w><C-h>", "Move to right window" },
+  k = { "<C-w><C-k>", "Move to up window" },
+  l = { "<C-w><C-l>", "Move to right window" },
   m = { "<cmd>only<cr>", "maximize current window" },
 }
 

@@ -15,7 +15,7 @@ export BROWSER='qutebrowser'
 alias ls='ls --color'
 alias la='ls -a --color'
 alias ll='ls -l --color'
-alias vim='lvim'
+alias vim='nvim'
 alias lg='lazygit'
 alias fm='clifm'
 alias c='clear'
@@ -30,6 +30,7 @@ alias remove='sudo pacman -Rsu'
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
+alias fm='ranger'
 
 # end alias
 
@@ -41,6 +42,6 @@ fi
 
 complete -cf sudo
 
-export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/:/home/dp/.cargo/bin
+export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/:/home/dp/.cargo/bin:/var/lib/snapd/snap/bin:/home/dp/.config/scripts
 
-[ -f "/home/dp/.ghcup/env" ] && source "/home/dp/.ghcup/env" # ghcup-env
+#[ -f "/home/dp/.ghcup/env" ] && source "/home/dp/.ghcup/env" # ghcup-env
