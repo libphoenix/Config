@@ -20,6 +20,7 @@
     follow = none
 
     ### Geometry ###
+    geometry = "300x5-10+20"
 
     # dynamic width from 0 to 300
     # width = (0, 300)
