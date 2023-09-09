@@ -8,4 +8,6 @@ configuration {
   display-combi: "  ";
   font: "ComicMono 14";
 }
-@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+//@theme "/usr/share/rofi/themes/DarkBlue.rasi"
+//@theme "/home/dp/.config/rofi/themes/spotlight.rasi"
+@theme "/home/dp/.config/rofi/themes/rounded-blue-dark.rasi"

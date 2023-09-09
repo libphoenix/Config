@@ -74,5 +74,8 @@ keymap.set("n", "<S-s>", ":HopLine<CR>") -- Hop to a line
 
 -- terminal commands
 keymap.set("t", "<ESC><ESC>", "<C-\\><C-n><CMD>:FTermClose<CR>") -- Toggle Fterm in terminal mode
-keymap.set("n", "<leader>tt", ":FTermOpen<CR>") -- Toggle Fterm in normal mode
-keymap.set("n", "<leader>tx", ":FTermExit<CR>") -- Close Fterm
+keymap.set("n", "<leader>to", ":FTermOpen<CR>") -- Toggle Fterm in normal mode
+keymap.set("n", "<leader>tc", ":FTermExit<CR>") -- Close Fterm
+
+-- todo's
+keymap.set("n", "<leader>tt", ":TodoTelescope<CR>") -- Todo telescope

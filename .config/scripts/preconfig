@@ -6,7 +6,8 @@ xss-lock slock &
 unclutter &
 setxkbmap us -option ctrl:swapcaps
 xset r rate 300 100 &
-#picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 &
+#picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 500 &
+picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom &
 #xrandr --output eDP-1 --off
 
 
