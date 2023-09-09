@@ -1,6 +1,21 @@
-#
-# ~/.bashrc
-#
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
 
 neofetch
 set -o vi
@@ -9,39 +24,9 @@ set -o vi
 eval "$(starship init bash)"
 
 export EDITOR='nvim'
-export BROWSER='qutebrowser'
-
-# alias
-alias ls='ls --color'
-alias la='ls -a --color'
-alias ll='ls -l --color'
-alias vim='nvim'
-alias lg='lazygit'
-alias fm='clifm'
-alias c='clear'
-
-# package manager
-alias search='pacman -Ss'
-alias install='sudo pacman -S'
-alias update='sudo pacman -Syu'
-alias remove='sudo pacman -Rsu'
-
-# git
-alias ga='git add .'
-alias gc='git commit'
-alias gp='git push'
-alias fm='ranger'
-
-# end alias
-
-
-
-if [ -f /etc/bash_completion ]; then
-   . /etc/bash_completion
-fi
+export BROWSER='firefox'
 
 complete -cf sudo
 
-export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/:/home/dp/.cargo/bin:/var/lib/snapd/snap/bin:/home/dp/.config/scripts
-
-#[ -f "/home/dp/.ghcup/env" ] && source "/home/dp/.ghcup/env" # ghcup-env
+export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/:/home/dp/.config/scripts/:/snap/bin
+export PATH=$PATH:/usr/local/go/bin
