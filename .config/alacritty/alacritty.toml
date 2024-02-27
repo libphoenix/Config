@@ -1,0 +1,27 @@
+import = ["/home/dp/.config/alacritty/dracula.toml"]
+
+[font]
+size = 16
+
+[font.bold]
+family = "ComicMono"
+style = "Bold"
+
+[font.bold_italic]
+family = "ComicMono"
+style = "Bold Italic"
+
+[font.italic]
+family = "ComicMono"
+style = "Italic"
+
+[font.normal]
+family = "ComicMono"
+style = "Regular"
+
+[scrolling]
+history = 1000
+
+[window]
+opacity = 1.0
+title = "Terminal"

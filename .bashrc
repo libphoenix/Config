@@ -22,6 +22,7 @@ set -o vi
 
 # sharship config
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 
 export EDITOR='nvim'
 export BROWSER='firefox'
@@ -30,3 +31,4 @@ complete -cf sudo
 
 export PATH=$PATH:~/.local/bin:/home/dp/go/bin:/home/dp/.local/bin/:/home/dp/.config/scripts/:/snap/bin
 export PATH=$PATH:/usr/local/go/bin
+

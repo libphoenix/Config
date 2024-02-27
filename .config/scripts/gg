@@ -1,0 +1,3 @@
+#!/bin/bash
+#echo "$@" | xargs -I{} xdg-open https://www.google.de/search?q={}
+echo "$@" | xargs -I{} netsurf --class "rofiwebsearch" --window_width 1700 --window_height 1000 --window_x 100 --window_y 20 https://www.google.de/search?q={}

@@ -1,0 +1,5 @@
+require("neovim.configs.dashboard")
+require("neovim.configs.lsp-config")
+require("neovim.configs.lualine")
+require("neovim.configs.colorizer")
+require("neovim.configs.onedark")

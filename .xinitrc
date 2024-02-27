@@ -1,5 +1,6 @@
-#!/bin/bash 
+#!/bin/bash
 
 preconfig
-
-exec dwm
+while true; do
+	dwm
+done
